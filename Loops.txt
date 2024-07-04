@@ -1,0 +1,28 @@
+FOR LOOP :
+
+DECLARE
+    l_counter NUMBER := 1;
+BEGIN
+    FOR l_counter IN 1..5 LOOP
+        -- Your statements here
+        DBMS_OUTPUT.PUT_LINE('Iteration ' || l_counter);
+    END LOOP;
+END;
+/
+
+
+
+Basic PL/SQL LOOP:
+
+DECLARE
+    l_counter NUMBER := 0;
+BEGIN
+    LOOP
+        l_counter := l_counter + 1;
+        EXIT WHEN l_counter > 3;
+        DBMS_OUTPUT.PUT_LINE('Inside loop: ' || l_counter);
+    END LOOP;
+    DBMS_OUTPUT.PUT_LINE('After loop: ' || l_counter);
+END;
+/
+

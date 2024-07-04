@@ -1,0 +1,33 @@
+INNER JOIN (Simple Join):
+
+SELECT a.roll_no, a.name, b.dept_name
+FROM stud1 a
+INNER JOIN dept b ON a.roll_no = b.roll_no;
+
+
+LEFT JOIN (Left Outer Join):
+
+SELECT a.roll_no, a.name, b.dept_name
+FROM stud1 a
+LEFT JOIN dept b ON a.roll_no = b.roll_no;
+
+
+RIGHT JOIN (Right Outer Join):
+
+SELECT a.roll_no, a.name, b.dept_name
+FROM stud1 a
+RIGHT JOIN dept b ON a.roll_no = b.roll_no;
+
+
+FULL JOIN (Full Outer Join):
+
+SELECT a.column1, b.column2
+FROM table1 a
+FULL JOIN table2 b ON a.key = b.key;
+
+
+CROSS JOIN (Cartesian Product):
+
+SELECT a.column1, b.column2
+FROM table1 a
+CROSS JOIN table2 b;
