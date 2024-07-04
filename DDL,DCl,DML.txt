@@ -1,0 +1,77 @@
+
+## 1. DDL (Data Definition Language)
+
+DDL commands are used to define and modify the structure of database objects.
+
+### Create Table
+
+CREATE TABLE Employees (
+    EmployeeID INT PRIMARY KEY,
+    FirstName VARCHAR(50),
+    LastName VARCHAR(50),
+    BirthDate DATE,
+    HireDate DATE
+);
+
+
+### Alter Table
+
+ALTER TABLE Employees
+ADD Email VARCHAR(100);
+
+
+### Drop Table
+
+
+DROP TABLE Employees;
+
+
+## 2. DML (Data Manipulation Language)
+
+DML commands are used to manipulate the data stored in database objects.
+
+### Insert
+
+INSERT INTO Employees (EmployeeID, FirstName, LastName, BirthDate, HireDate, Email)
+VALUES (1, 'John', 'Doe', '1985-01-15', '2010-06-01', 'john.doe@example.com');
+
+### Update
+
+UPDATE Employees
+SET Email = 'john.d.newemail@example.com'
+WHERE EmployeeID = 1;
+
+
+### Delete
+
+DELETE FROM Employees
+WHERE EmployeeID = 1;
+
+
+### Select
+
+SELECT * FROM Employees;
+
+
+## 3. DCL (Data Control Language)
+
+DCL commands are used to control access to data in the database.
+
+
+GRANT SELECT, INSERT, UPDATE ON Employees TO 'username';
+
+
+### Revoke
+
+REVOKE INSERT, UPDATE ON Employees FROM 'username';
+
+
+### Create User
+
+CREATE USER 'newuser' IDENTIFIED BY 'password';
+
+
+### Drop User
+
+DROP USER 'newuser';
+
