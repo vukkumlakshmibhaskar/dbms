@@ -5,9 +5,9 @@ DECLARE
     y NUMBER(5);
     z NUMBER(7);
 BEGIN
-    x := 10; -- Assigning 10 to x
-    y := 20; -- Assigning 20 to y
-    z := x + y; -- Sum of x and y
+    x := 10;
+    y := 20;
+    z := x + y;
     DBMS_OUTPUT.PUT_LINE('Sum is ' || z);
 END;
 /
