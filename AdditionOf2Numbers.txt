@@ -15,18 +15,3 @@ END;
 
 
 
-Using a Function (Runtime Input):
-
-
-CREATE OR REPLACE FUNCTION add_two_nums(num1 NUMERIC, num2 NUMERIC)
-    RETURN NUMERIC AS
-BEGIN
-    RETURN num1 + num2;
-END;
-$$ LANGUAGE PLPGSQL;
-
-
-SELECT add_two_nums(5, 6); ///output
-
-
-
