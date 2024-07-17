@@ -1,5 +1,3 @@
-Using Variables:
-
 DECLARE
     x NUMBER(5);
     y NUMBER(5);
