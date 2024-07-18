@@ -1,0 +1,81 @@
+DECLARE
+   a INTEGER := 5;
+   b INTEGER := 3;
+   result INTEGER;
+BEGIN
+   DBMS_OUTPUT.PUT_LINE('--------------------');
+   DBMS_OUTPUT.PUT_LINE('ARITHMETIC OPERATORS');
+   DBMS_OUTPUT.PUT_LINE('--------------------');
+   result := a + b;
+   DBMS_OUTPUT.PUT_LINE('Addition: ' || result);
+   result := a - b;
+   DBMS_OUTPUT.PUT_LINE('Subtraction: ' || result);
+   result := a * b;
+   DBMS_OUTPUT.PUT_LINE('Multiplication: ' || result);
+   result := a / b;
+   DBMS_OUTPUT.PUT_LINE('Division: ' || result);
+END;
+/
+
+DECLARE
+   a INTEGER := 5;
+   b INTEGER := 3;
+BEGIN
+   DBMS_OUTPUT.PUT_LINE('--------------------');
+   DBMS_OUTPUT.PUT_LINE('COMPARISON OPERATORS');
+   DBMS_OUTPUT.PUT_LINE('--------------------');
+   IF a > b THEN
+      DBMS_OUTPUT.PUT_LINE('a is greater than b');
+   ELSIF a < b THEN
+      DBMS_OUTPUT.PUT_LINE('a is less than b');
+   ELSE
+      DBMS_OUTPUT.PUT_LINE('a is equal to b');
+   END IF;
+END;
+/
+
+DECLARE
+   x BOOLEAN := TRUE;
+   y BOOLEAN := FALSE;
+BEGIN
+   DBMS_OUTPUT.PUT_LINE('-----------------');
+   DBMS_OUTPUT.PUT_LINE('LOGICAL OPERATORS');
+   DBMS_OUTPUT.PUT_LINE('-----------------');
+   IF x AND y THEN
+      DBMS_OUTPUT.PUT_LINE('x AND y is TRUE');
+   ELSE
+      DBMS_OUTPUT.PUT_LINE('x AND y is FALSE');
+   END IF;
+   
+   IF x OR y THEN
+      DBMS_OUTPUT.PUT_LINE('x OR y is TRUE');
+   ELSE
+      DBMS_OUTPUT.PUT_LINE('x OR y is FALSE');
+   END IF;
+   
+   IF NOT x THEN
+      DBMS_OUTPUT.PUT_LINE('NOT x is TRUE');
+   ELSE
+      DBMS_OUTPUT.PUT_LINE('NOT x is FALSE');
+   END IF;
+END;
+/
+
+
+DECLARE
+   str VARCHAR2(20) := 'Hello, World!';
+   len INTEGER;
+BEGIN
+   DBMS_OUTPUT.PUT_LINE('------------------');
+   DBMS_OUTPUT.PUT_LINE('BUILT-IN FUNCTIONS');
+   DBMS_OUTPUT.PUT_LINE('------------------');
+   len := LENGTH(str);
+   DBMS_OUTPUT.PUT_LINE('Length of string: ' || len);
+   
+   DBMS_OUTPUT.PUT_LINE('Uppercase: ' || UPPER(str));
+   
+   DBMS_OUTPUT.PUT_LINE('Substring: ' || SUBSTR(str, 1, 5));
+   
+   DBMS_OUTPUT.PUT_LINE('Concatenation: ' || CONCAT(str, ' How are you?'));
+END;
+/
